@@ -13,6 +13,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title : 'Shopping App',
+      theme: ThemeData(
+        fontFamily: 'MontserratAlternates',
+        colorScheme: ColorScheme.fromSeed(seedColor: Color.fromRGBO(254,206,1,1),
+        )
+      ),
       home: HomePage() ,
     );
   }
