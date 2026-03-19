@@ -7,20 +7,28 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(
-          children: [
-            Text(
-              'Shoes Collection',
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 35,
-              )
-            )
-          ]
+        child: Row(
+            children: [
+              Padding(
+                padding: const EdgeInsets.all(20.0),
+                child: Text(
+                  'Shoes\n Collection',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35,
+                  )
+                ),
+              ),
+              Expanded(
+                  child: TextField(
+                    decoration: InputDecoration(
+                        hintText: 'Search',
+                    )
+                  )
+              ),
+            ]
+          ),
         ),
-      )
-
-
-    );
+      );
   }
 }
