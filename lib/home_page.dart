@@ -23,6 +23,10 @@ class HomePage extends StatelessWidget {
                   child: TextField(
                     decoration: InputDecoration(
                         hintText: 'Search',
+                        prefixIcon: Icon(
+                            Icons.search,
+                            color: Colors.blueGrey,
+                        )
                     )
                   )
               ),
