@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 class HomePage extends StatelessWidget {
   const HomePage ({super.key});
 
+  final List<String> filters = const['All', 'Adidas', 'Nike', 'Bata'];
+
+
   @override
   Widget build(BuildContext context) {
     const border =  OutlineInputBorder(
@@ -18,7 +21,7 @@ class HomePage extends StatelessWidget {
         child: Row(
           children: [
             Padding(
-              padding: const EdgeInsets.all(20.0),
+              padding: EdgeInsets.all(20.0),
               child: Text(
                 'Shoes\n Collection',
                 style: TextStyle(
@@ -27,7 +30,7 @@ class HomePage extends StatelessWidget {
                 )
               ),
             ),
-            Expanded(
+            const Expanded(
               child: TextField(
                 decoration: InputDecoration(
                   hintText: 'Search',
@@ -41,6 +44,10 @@ class HomePage extends StatelessWidget {
                 ),
               ),
             ),
+            ListView.builder(
+              itemCount: filters.length,
+              itemBuilder: (context,index) {},
+            )
           ],
         ),
       ),
