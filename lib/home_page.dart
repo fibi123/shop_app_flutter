@@ -18,37 +18,51 @@ class HomePage extends StatelessWidget {
                       );
     return Scaffold(
       body: SafeArea(
-        child: Row(
-          children: [
-            Padding(
-              padding: EdgeInsets.all(20.0),
-              child: Text(
-                'Shoes\n Collection',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 35,
-                )
-              ),
-            ),
-            const Expanded(
-              child: TextField(
-                decoration: InputDecoration(
-                  hintText: 'Search',
-                  prefixIcon: Icon(
-                      Icons.search,
-                      // color: Colors.blueGrey,
-                  ),
-                  border: border,
-                  enabledBorder: border,
-                  focusedBorder: border,
+        child: Column(
+          Row(
+            children: [
+              Padding(
+                padding: EdgeInsets.all(20.0),
+                child: Text(
+                  'Shoes\n Collection',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 35,
+                  )
                 ),
               ),
-            ),
-            ListView.builder(
+              const Expanded(
+                child: TextField(
+                  decoration: InputDecoration(
+                    hintText: 'Search',
+                    prefixIcon: Icon(
+                        Icons.search,
+                        // color: Colors.blueGrey,
+                    ),
+                    border: border,
+                    enabledBorder: border,
+                    focusedBorder: border,
+                  ),
+                ),
+              ),
+            ],
+          ),
+          SizedBox(
+            height: 120,
+            child: ListView.builder(
               itemCount: filters.length,
-              itemBuilder: (context,index) {},
-            )
-          ],
+              scrollDirection: Axis.horizontal,
+              itemBuilder: (context,index) {
+                final filter = filters[index];
+                return Padding(
+                  padding: const EdgeInsets.symmetric(8.0),
+                  child: Chip(
+                    label: Text(filter),
+                  ),
+                );
+              },
+            ),
+          ),
         ),
       ),
     );
