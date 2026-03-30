@@ -55,9 +55,18 @@ class HomePage extends StatelessWidget {
               itemBuilder: (context,index) {
                 final filter = filters[index];
                 return Padding(
-                  padding: const EdgeInsets.symmetric(8.0),
+                  padding: const EdgeInsets.symmetric(
+                      horizontal: 8.0
+                  ),
                   child: Chip(
                     label: Text(filter),
+                    labelStyle: const TextStyle(
+                      fontSize: 16,
+                    ),
+                    padding: EdgeInsets.symmetric(
+                        horizontal: 20,
+                        vertical: 15,
+                    ),
                   ),
                 );
               },
