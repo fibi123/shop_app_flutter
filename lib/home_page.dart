@@ -59,6 +59,10 @@ class HomePage extends StatelessWidget {
                       horizontal: 8.0
                   ),
                   child: Chip(
+                    backgroundColor: const Color.fromRGBO(245,247, 249, 1),
+                    side: const BorderSide(
+                      color: const Color.fromRGBO(245, 247, 249, 1)
+                    )
                     label: Text(filter),
                     labelStyle: const TextStyle(
                       fontSize: 16,
@@ -67,6 +71,9 @@ class HomePage extends StatelessWidget {
                         horizontal: 20,
                         vertical: 15,
                     ),
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(30),
+                    )
                   ),
                 );
               },
