@@ -1,10 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatelessWidget {
-  const HomePage ({super.key});
+class HomePage extends StatefulWidget {
+  const HomePage({super.key});
 
   final List<String> filters = const['All', 'Adidas', 'Nike', 'Bata'];
 
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
 
   @override
   Widget build(BuildContext context) {
@@ -83,4 +86,4 @@ class HomePage extends StatelessWidget {
       ),
     );
   }
-}
+
