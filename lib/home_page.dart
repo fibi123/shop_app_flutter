@@ -62,7 +62,7 @@ class HomePage extends StatelessWidget {
                     backgroundColor: const Color.fromRGBO(245,247, 249, 1),
                     side: const BorderSide(
                       color: const Color.fromRGBO(245, 247, 249, 1)
-                    )
+                    ),
                     label: Text(filter),
                     labelStyle: const TextStyle(
                       fontSize: 16,
